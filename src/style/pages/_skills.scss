@@ -1,0 +1,43 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+.skills-page {
+  padding: 50px 0;
+  margin: 50px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  .skill-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .skill {
+      padding: 12px 45px;
+      text-wrap: nowrap;
+      border-radius: 100px;
+      &:nth-child(odd) {
+        border: 2px solid $border-color;
+      }
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+  }
+}

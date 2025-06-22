@@ -1,0 +1,9 @@
+@use "../abstract/variables" as *;
+
+.button {
+  width: fit-content;
+  // background-color: $major-pink;
+  padding: 5px 15px;
+  border-radius: 100px;
+  font-weight: 600;
+}

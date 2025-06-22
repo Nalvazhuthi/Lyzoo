@@ -1,0 +1,54 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+.works-section {
+  padding: 2rem;
+
+  .works-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4.5rem;
+    align-items: start;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .work-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      &:nth-child(even) {
+        margin-top: 200px;
+      }
+      .image-wrapper {
+        width: 500px;
+        overflow: hidden;
+        img {
+            transition: all 0.2s linear;
+          width: 100%;
+          height: fit-content;
+          border-radius: 6px;
+        }
+        &:hover {
+          img {
+            scale: 1.02;
+          }
+        }
+      }
+
+      .work-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .work-title {
+          color: $text-primary;
+        }
+        .work-description {
+          color: $text-secondary;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
