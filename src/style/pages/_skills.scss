@@ -2,28 +2,45 @@
 @use "../abstract/mixins" as *;
 
 .skills-page {
-  padding: 50px 0;
-  margin: 50px 0;
+  padding: 40px 0;
+  background: #000;
+  overflow: hidden;
+  color: white;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  .skill-wrapper {
+  .skills-content {
     display: flex;
-    width: 100%;
-    overflow: auto;
-    &::-webkit-scrollbar {
-      display: none;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .skills-row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content;
+    will-change: transform;
+    gap: 24px;
+  }
+
+  .skill-item {
+    padding: 12px 36px;
+    // border: 2px solid white;
+    border-radius: 100px;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+
+    &:nth-child(odd) {
+      border: 2px solid $border-color;
     }
-    .skill {
-      padding: 12px 45px;
-      text-wrap: nowrap;
-      border-radius: 100px;
-      &:nth-child(odd) {
-        border: 2px solid $border-color;
-      }
+
+    span {
+      display: inline-block;
     }
   }
+
+
   &::before {
     content: "";
     position: absolute;
@@ -32,6 +49,7 @@
     height: 4px;
     background-color: #fff;
   }
+
   &::after {
     content: "";
     position: absolute;
