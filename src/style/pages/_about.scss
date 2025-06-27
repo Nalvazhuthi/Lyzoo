@@ -1,0 +1,28 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+
+.about-page {
+    display: flex;
+    padding: 80px 2rem;
+
+    background: #000;
+    overflow: hidden;
+    color: white;
+    position: relative;
+
+    .about {
+        flex: 1.5;
+        font-size: 45px;
+        line-height: 60px;
+    }
+
+    .image-scroller {
+        flex: 1;
+    }
+}
+
+
+.contact-form-message-wrapper {
+    display: flex;
+}

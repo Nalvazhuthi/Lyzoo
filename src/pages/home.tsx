@@ -9,22 +9,34 @@ const Home = () => {
           <div className="first-name">Nanni</div>
           <div className="last-name">Nalvazhuthi</div>
         </div>
+        <div className="navs">
+          <div className="nav">Home</div>
+          <div className="nav">About</div>
+          <div className="nav">Works</div>
+          <div className="nav">Services</div>
+          <div className="nav">Contact</div>
+        </div>
         <div className="role-location">
           <div className="role">UI/UX Developer</div>
           <div className="location">Based in India</div>
         </div>
       </header>
 
-      {/* <button className='talk-button'>
-        Let’s talk business
-      </button> */}
+
       <main className="hero-statement">
         <div className="content">
           I Solve
           Humans <br />
           <div className="highlight">Problems</div>
           Using Telekinesis
+
+          <button className='talk-button'>
+            Let’s talk business
+          </button>
+          
         </div>
+
+
         <div className="scrolling">
           <div className="icon">
             <ScrollIcon />

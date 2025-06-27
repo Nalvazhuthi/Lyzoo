@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
-  background-color: $bg-color;
+  // background-color: $bg-color;
 }
 
 input[type="password"]::-ms-reveal,
@@ -42,4 +42,9 @@ button {
   color: $text-primary;
   border: none;
   outline: none;
+}
+
+.home-page{
+  position: relative;
+  background-color: transparent;
 }

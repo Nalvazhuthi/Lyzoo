@@ -7,6 +7,7 @@
   overflow: hidden;
   color: white;
   position: relative;
+
   .skills-content {
     display: flex;
     flex-direction: column;
@@ -19,26 +20,44 @@
     width: fit-content;
     will-change: transform;
     gap: 24px;
-  }
 
-  .skill-item {
-    padding: 12px 36px;
-    // border: 2px solid white;
-    border-radius: 100px;
-    white-space: nowrap;
-    font-size: 1rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: 0.3s ease-in-out;
+    .skill-item {
+      padding: 12px 36px;
+      // border: 2px solid white;
+      border-radius: 100px;
+      white-space: nowrap;
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: 0.3s ease-in-out;
+
+      // &:nth-child(odd) {
+      //   border: 2px solid $border-color;
+      // }
+
+      span {
+        display: inline-block;
+      }
+    }
 
     &:nth-child(odd) {
-      border: 2px solid $border-color;
+      .skill-item {
+        &:nth-child(even) {
+          border: 2px solid $border-color;
+        }
+      }
     }
 
-    span {
-      display: inline-block;
+    &:nth-child(even) {
+      .skill-item {
+        &:nth-child(odd) {
+          border: 2px solid $border-color;
+        }
+      }
     }
+
   }
+
 
 
   &::before {
