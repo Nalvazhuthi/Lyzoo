@@ -1,23 +1,27 @@
 @use "../abstract/variables" as *;
 @use "../abstract/mixins" as *;
 
-
 .about-page {
-    display: flex;
-    padding: 80px 2rem;
-
-    .about {
-        flex: 1.5;
-        font-size: 45px;
-        line-height: 60px;
+  display: flex;
+  padding: 80px 2rem;
+  @include respond(sm) {
+    flex-direction: column;
+  }
+  .about {
+    flex: 1.5;
+    font-size: 3vw;
+    line-height: 60px;
+    @include respond(sm) {
+      font-size: 6vw;
+      line-height:30px;
     }
+  }
 
-    .image-scroller {
-        flex: 1;
-    }
+  .image-scroller {
+    flex: 1;
+  }
 }
 
-
 .contact-form-message-wrapper {
-    display: flex;
+  display: flex;
 }

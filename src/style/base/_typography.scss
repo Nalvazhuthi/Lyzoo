@@ -1,7 +1,12 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+
 // Global Typography Styles
 * {
   font-family: var(--poppins);
   font-family: "Aliferous";
   font-weight: var(--font-weight-regular);
-  font-size: var(--font-size-regular);
+  font-size: var(--font-size-medium);
+
 }

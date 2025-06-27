@@ -7,6 +7,7 @@ import About from './pages/about'
 import Contact from './pages/contact'
 import Scene from './components/scene'
 import NavBar from './pages/navBar'
+import Services from './pages/services'
 
 const App = () => {
   const [modelLoaded, setModelLoaded] = useState(false)
@@ -24,6 +25,7 @@ const App = () => {
           <About />
           <Skills />
           <Works />
+          <Services />
           <Contact />
         </>
       )}
@@ -32,3 +34,5 @@ const App = () => {
 }
 
 export default App
+
+

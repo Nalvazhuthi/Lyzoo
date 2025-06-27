@@ -6,12 +6,13 @@
 
   .works-grid {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 4.5rem;
     align-items: start;
+    grid-template-columns: repeat(2, 1fr);
 
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
+    @include respond(sm) {
+      gap: 2rem;
+      grid-template-columns: 1fr;
     }
 
     .work-card {
@@ -22,13 +23,17 @@
 
       &:nth-child(even) {
         margin-top: 200px;
+        @include respond(sm) {
+          margin-top: 0;
+        }
       }
-
       .image-wrapper {
         width: 500px;
         overflow: hidden;
         border-radius: 6px;
-
+        @include respond(sm) {
+          width: 100%;
+        }
         img {
           transition: all 0.2s linear;
           width: 100%;
@@ -37,7 +42,6 @@
         }
 
         &:hover {
-
           img {
             scale: 1.02;
           }
