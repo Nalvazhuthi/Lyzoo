@@ -7,55 +7,7 @@
 
 
 
-  .intro-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 12px 0;
-    @include flex-space-around;
-    // position: absolute;
-    z-index: 1;
-    background: #0000002a;
 
-    .identity {
-      .last-name {
-        color: $text-secondary;
-        margin-top: 10px;
-        padding-left: 50px;
-      }
-    }
-
-    .navs {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      cursor: pointer;
-
-      .nav {
-        color: #a2a2a2;
-        transition: all .2s linear;
-
-        &:hover {
-          color: #ffffff;
-        }
-      }
-    }
-
-    .role-location {
-      background: transparent;
-
-      div {
-
-        background: transparent;
-      }
-
-      .role {
-        color: $text-secondary;
-        margin-bottom: 10px;
-        padding-left: 50px;
-      }
-    }
-  }
 
   .talk-button {
     // position: absolute;
@@ -114,3 +66,54 @@
     z-index: 1;
   }
 }
+
+
+  .intro-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 12px 0;
+    @include flex-space-around;
+    // position: absolute;
+    z-index: 100;
+    background: #000000d6;
+
+    .identity {
+      .last-name {
+        color: $text-secondary;
+        margin-top: 10px;
+        padding-left: 50px;
+      }
+    }
+
+    .navs {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      cursor: pointer;
+
+      .nav {
+        color: #a2a2a2;
+        transition: all .2s linear;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .role-location {
+      background: transparent;
+
+      div {
+
+        background: transparent;
+      }
+
+      .role {
+        color: $text-secondary;
+        margin-bottom: 10px;
+        padding-left: 50px;
+      }
+    }
+  }

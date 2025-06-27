@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
-  // background-color: $bg-color;
 }
 
 input[type="password"]::-ms-reveal,
@@ -21,6 +20,38 @@ input[type="password"]::-webwkit-inner-spin-button {
 textarea{
   background: transparent;
 }
+
+
+/* Scrollbar styles for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: $bg-color;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: $bg-color;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $text-secondary;
+  border-radius: 10px;
+  border: 2px solid $bg-color; // creates a "padding" effect
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lighten($text-secondary, 10%); // subtle highlight on hover
+}
+
+/* Corner (where horizontal and vertical scrollbars meet) */
+::-webkit-scrollbar-corner {
+  background: $bg-color;
+}
+
 html,
 body,
 #root {

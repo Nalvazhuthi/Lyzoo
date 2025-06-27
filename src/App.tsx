@@ -6,6 +6,7 @@ import Works from './pages/works'
 import About from './pages/about'
 import Contact from './pages/contact'
 import Scene from './components/scene'
+import NavBar from './pages/navBar'
 
 const App = () => {
   const [modelLoaded, setModelLoaded] = useState(false)
@@ -18,6 +19,7 @@ const App = () => {
 
       {modelLoaded && (
         <>
+          <NavBar />
           <Home />
           <About />
           <Skills />
