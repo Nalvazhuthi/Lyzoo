@@ -23,7 +23,25 @@
   pointer-events: none;
   width: 100vw;
   height: 100vh;
-  canvas{
+
+  canvas {
     pointer-events: none;
   }
+}
+
+
+
+
+.home-page,
+.about-page,
+.skills-page,
+.works-section,
+.contact-page {
+  overflow: hidden;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+.home-page {
+  z-index: -1;
 }

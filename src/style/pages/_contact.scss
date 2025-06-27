@@ -1,23 +1,19 @@
 .contact-page {
-    height: calc(100vh - 90px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 2rem;
+    align-items: center;
+    padding-top: 8rem;
 
 
-    background: #000;
-    overflow: hidden;
-    color: white;
-    position: relative;
 }
 
 .contact-header {
     font-size: 2.5rem;
-    font-weight: 700;
     margin-bottom: 1rem;
     text-align: center;
-    color: #0070f3;
+    color: #fff;
 }
 
 .contact-message-form-wrapper {
@@ -52,7 +48,7 @@
         transition: border 0.3s ease;
 
         &:focus {
-            border-color: #0070f3;
+            border-color: #fff;
         }
     }
 

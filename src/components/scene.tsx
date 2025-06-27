@@ -1,27 +1,14 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, useGLTF, Environment, ContactShadows } from '@react-three/drei'
-import * as THREE from 'three'
+import { Environment, ContactShadows } from '@react-three/drei'
+import { Model } from './model'
 
-const Model = () => {
-    const { scene } = useGLTF('/model/brokenGlass.glb')
-    console.log('scene: ', scene);
-
-    scene.scale.set(1, 1, 1)
-    scene.position.set(0, 0, 0)
-
-    return (
-
-        <primitive
-            object={scene}
-            scale={[5, 5, 5]}
-            rotation={[0, 0, 0]}
-            position={[0, 0, 0]}
-        />
-    )
+// Define props type
+type SceneProps = {
+    onModelLoad?: () => void
 }
 
-const Scene = () => {
+const Scene: React.FC<SceneProps> = ({ onModelLoad }) => {
     return (
         <div className="canvas-container">
             <Canvas
@@ -38,10 +25,10 @@ const Scene = () => {
                     shadow-mapSize-height={1024}
                 />
 
-                <Suspense fallback={null}>
-                    <Model />
+                <React.Suspense fallback={null}>
+                    <Model onLoad={onModelLoad} />
                     <Environment preset="studio" />
-                </Suspense>
+                </React.Suspense>
 
                 <ContactShadows
                     position={[0, -0.8, 0]}
@@ -50,8 +37,6 @@ const Scene = () => {
                     blur={2}
                     far={4}
                 />
-
-                {/* <OrbitControls /> */}
             </Canvas>
         </div>
     )
