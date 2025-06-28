@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { Email, GitHub, Instagram, LinkedIn } from '../assets/svg/exportIcons';
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -105,16 +106,21 @@ const Contact = () => {
       </div>
 
       <div className="social-links">
-        <a href="mailto:nalvazhuthi2002@gmail.com" target="_blank" rel="noopener noreferrer">
-          Email
+        <a href="https://linkedin.com/in/nalvazhuthi-n-n-a78992347/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <LinkedIn />
         </a>
-        <a href="https://github.com/Nalvazhuthi" target="_blank" rel="noopener noreferrer">
-          GitHub
+        <a href="https://github.com/Nalvazhuthi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <GitHub />
         </a>
-        <a href="https://linkedin.com/in/nalvazhuthi-n-n-a78992347/" target="_blank" rel="noopener noreferrer">
-          LinkedIn
+        <a href="mailto:nalvazhuthi2002@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+          <Email />
+        </a>
+        <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <Instagram />
         </a>
       </div>
+
+
     </div>
   );
 };

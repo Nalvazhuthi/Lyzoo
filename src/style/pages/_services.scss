@@ -2,7 +2,8 @@
 @use "../abstract/mixins" as *;
 .services-page {
   padding: 4rem 2rem;
-
+  height: 100vh;
+  padding-top: 6rem;
   .services-header {
     text-align: center;
     margin-bottom: 3rem;

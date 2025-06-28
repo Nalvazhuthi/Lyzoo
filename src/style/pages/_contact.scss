@@ -2,6 +2,7 @@
 @use "../abstract/mixins" as *;
 
 .contact-page {
+  height: 100vh;
   @include flex-space-between;
   flex-direction: column;
   padding-top: 8rem;
@@ -126,7 +127,8 @@
     color: $text-secondary;
     text-decoration: none;
     transition: color 0.3s;
-
+    display: flex;
+    align-items: center;
     &:hover {
       color: $text-primary;
     }
