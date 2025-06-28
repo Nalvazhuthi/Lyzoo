@@ -10,13 +10,12 @@
 }
 
 @font-face {
-  font-family: "boldris";
-  src: url("../../assets/fonts/boldris/Boldris.otf") format("opentype"),
-    url("../../assets/fonts/boldris/Boldris.ttf") format("truetype");
+  font-family: "Josefin Sans";
+  src: url("../../assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 
 /* Define font family variable */
 :root {

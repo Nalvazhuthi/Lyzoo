@@ -8,15 +8,21 @@ import Contact from './pages/contact'
 import Scene from './components/scene'
 import NavBar from './pages/navBar'
 import Services from './pages/services'
+import Loading from './components/loading'
 
 const App = () => {
   const [modelLoaded, setModelLoaded] = useState(false)
 
+  const onModelLoad = () => {
+    setTimeout(() => {
+      setModelLoaded(true)
+    }, 2000)
+  }
   return (
     <div className="content-container">
-      {!modelLoaded && <div className="loading-screen">Loading...</div>}
+      {!modelLoaded && <Loading />}
 
-      <Scene onModelLoad={() => setModelLoaded(true)} />
+      <Scene onModelLoad={onModelLoad} />
 
       {modelLoaded && (
         <>

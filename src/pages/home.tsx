@@ -3,10 +3,7 @@ import { ScrollIcon } from '../assets/svg/exportIcons'
 
 const Home = () => {
   return (
-    <div className='home-page'>
-
-
-
+    <div className='home-page' id='home'>
       <main className="hero-statement">
         <div className="content">
           I Solve
@@ -17,7 +14,7 @@ const Home = () => {
           <button className='talk-button'>
             Let’s talk business
           </button>
-          
+
         </div>
 
 

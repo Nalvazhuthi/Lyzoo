@@ -5,6 +5,11 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 input[type="password"]::-ms-reveal,
@@ -17,10 +22,9 @@ input[type="password"]::-webwkit-inner-spin-button {
   /* Just in case */
   display: none;
 }
-textarea{
+textarea {
   background: transparent;
 }
-
 
 /* Scrollbar styles for dark theme */
 ::-webkit-scrollbar {
@@ -81,4 +85,9 @@ button {
 .home-page {
   position: relative;
   background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -2,11 +2,11 @@
 @use "../abstract/mixins" as *;
 
 .contact-page {
-  // height: 100vh;
   @include flex-space-between;
   flex-direction: column;
   padding-top: 8rem;
   @include respond(sm) {
+    height: 100vh;
     padding-top: 4.5rem;
     justify-content: space-around;
   }
@@ -29,6 +29,34 @@
   @include respond(sm) {
     padding: 0 2rem;
     flex-direction: column;
+  }
+  .message-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    @include flex-center;
+    background: #000000d6;
+    flex-direction: column;
+    button {
+      width: fit-content;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      padding: 10px 20px;
+      color: #fff;
+    }
+    .message-container {
+      background-color: $bg-color;
+      width: fit-content;
+      padding: 20px 30px;
+      text-align: center;
+      border-radius: 6px;
+      @include flex-center;
+      flex-direction: column;
+      gap: 12px;
+    }
   }
 }
 
@@ -57,6 +85,7 @@
     border: 1px solid $text-secondary;
     outline: none;
     transition: border 0.3s ease;
+    color: $text-primary;
 
     &:focus {
       border-color: $text-primary;
@@ -64,7 +93,7 @@
   }
 
   .form-textarea {
-    resize: vertical;
+    resize: none;
   }
 
   .form-button {

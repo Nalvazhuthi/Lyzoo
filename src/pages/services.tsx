@@ -29,7 +29,7 @@ const Services = () => {
     ];
 
     return (
-        <section className="services-page">
+        <section className="services-page" id='services'>
             <header className="services-header">
                 <h2>My Specializations</h2>
                 <p className="services-subHeader">Here’s how I can help elevate your digital product</p>

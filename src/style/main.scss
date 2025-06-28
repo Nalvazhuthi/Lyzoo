@@ -8,8 +8,8 @@
 @use "./base/typography";
 
 @use "./components/button";
+@use "./components/loading";
 
-@use "./pages/loading";
 @use "./pages/home";
 @use "./pages/skills";
 @use "./pages/works";

@@ -34,7 +34,7 @@ const Works = () => {
   ]
 
   return (
-    <div className="works-section">
+    <div className="works-section" id='works'>
       <div className="works-grid">
         {works.map((work, index) => (
           <div key={index} className="work-card">

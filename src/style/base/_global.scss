@@ -33,12 +33,14 @@
 .skills-page,
 .works-section,
 .contact-page,
-.services-page {
+.services-page,
+.loading-screen  {
   overflow: hidden;
   color: white;
   position: relative;
   z-index: 2;
 }
+
 .home-page {
   z-index: -1;
 }

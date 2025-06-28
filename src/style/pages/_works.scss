@@ -28,7 +28,7 @@
         }
       }
       .image-wrapper {
-        width: 500px;
+        max-width: 500px;
         overflow: hidden;
         border-radius: 6px;
         @include respond(sm) {

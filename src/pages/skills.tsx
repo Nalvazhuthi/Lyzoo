@@ -1,6 +1,4 @@
-import React, { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import React from 'react';
 
 const Skills = () => {
   const skillSets = [
@@ -9,56 +7,25 @@ const Skills = () => {
     ["Three.js", "React Three Fiber", "GLTF", "DRACO Compression", "3D UI", "REST APIs", "Git", "GitHub"]
   ];
 
-  const containerRef = useRef(null);
-  const rowRefs = useRef<HTMLDivElement[]>([]);
-
-  
-  useGSAP(() => {
-    rowRefs.current.forEach((row, i) => {
-      const direction = i % 2 === 0 ? 1 : -1;
-      const duration = 20 - i * 3;
-
-      gsap.to(row, {
-        xPercent: direction * -100,
-        duration,
-        ease: "none",
-        repeat: -1
-      });
-    });
-  }, { scope: containerRef });
-
   return (
-    <section className="skills-page" ref={containerRef}>
+    <section className="skills-page">
       <div className="skills-content">
-        {skillSets.map((set, i) => (
-          <div
-            key={i}
-            className="skills-row"
-            ref={(el) => {
-              if (el) rowRefs.current[i] = el;
-            }}
-            style={{
-              display: 'flex',
-              whiteSpace: 'nowrap',
-              overflow: 'hidden',
-            }}
-          >
-            {[...set, ...set].map((skill, index) => (
-              <div
-                key={index}
-                className="skill-item"
-                style={{
-                  flex: '0 0 auto',
-                  padding: '0.5rem 1rem',
-                  fontSize: '1rem',
-                  whiteSpace: 'nowrap'
-                }}
-              >
-                <span>{skill}</span>
+        {skillSets.map((set, i) => {
+          const repeatedSkills = Array(20).fill(set).flat(); // Repeat for infinite look
+          const direction = i % 2 === 0 ? 'scroll-left' : 'scroll-right';
+
+          return (
+            <div className={`skills-row ${direction}`} key={i}>
+              <div className="skills-track">
+                {repeatedSkills.map((skill, index) => (
+                  <div className="skill-item" key={index}>
+                    {skill}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        ))}
+            </div>
+          );
+        })}
       </div>
     </section>
   );
