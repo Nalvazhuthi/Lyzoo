@@ -3,7 +3,7 @@ import beautyProduct from "../assets/images/works/beauty-product.png"
 import freelanceAgency from "../assets/images/works/freelance-agency.png"
 import petCare from "../assets/images/works/pet-care.png"
 import englishlearning from "../assets/images/works/english-learning.png"
-import cafeStreet from "../assets/images/works/cafe-streeet.png"
+// import cafeStreet from "../assets/images/works/cafe-streeet.png"
 const Works = () => {
   const works = [
     {
