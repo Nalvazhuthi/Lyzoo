@@ -1,10 +1,36 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import beautyProduct from "../assets/images/works/beauty-product.png"
 import freelanceAgency from "../assets/images/works/freelance-agency.png"
 import petCare from "../assets/images/works/pet-care.png"
 import englishlearning from "../assets/images/works/english-learning.png"
-// import cafeStreet from "../assets/images/works/cafe-streeet.png"
+
+gsap.registerPlugin(ScrollTrigger)
+
 const Works = () => {
+  const worksRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from('.work-card', {
+        scrollTrigger: {
+          trigger: '.works-grid',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power3.out'
+      });
+    }, worksRef);
+
+    return () => ctx.revert(); // cleanup
+  }, [])
+
   const works = [
     {
       image: beautyProduct,
@@ -30,15 +56,10 @@ const Works = () => {
       description: "A clean and engaging site built for an online English learning platform, including interactive course previews and student testimonials.",
       url: "https://english-learning-agency.netlify.app/"
     },
-    // {
-    //   image: cafeStreet,
-    //   title: "Cafe Street Website",
-    //   description: "A vibrant and modern landing page for a street cafe. Built with Next.js and Tailwind CSS, showcasing the menu, location, and social presence with theme toggle support."
-    // }
   ]
 
   return (
-    <div className="works-section" id='works'>
+    <div className="works-section" id='works' ref={worksRef}>
       <div className="works-grid">
         {works.slice().reverse().map((work, index) => (
           <a
@@ -60,7 +81,6 @@ const Works = () => {
           </a>
         ))}
       </div>
-
     </div>
   )
 }
