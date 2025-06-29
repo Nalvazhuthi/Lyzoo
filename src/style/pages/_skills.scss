@@ -50,7 +50,7 @@
       border-radius: 20px;
       background: #1f1f1f;
       border: 1px solid #333;
-      display: flex;
+      @include flex-center;
     }
   }
 
