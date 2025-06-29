@@ -12,9 +12,9 @@ const Home = () => {
 
           <div className="highlight">Tailored to your needs</div>
 
-          <button className='talk-button'>
+          <a href="#contact" className='talk-button' >
             Let’s discuss your project
-          </button>
+          </a>
         </div>
 
         <div className="scrolling">

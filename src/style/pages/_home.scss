@@ -9,7 +9,9 @@
     margin-top: 32px;
     font-size: 20px;
     cursor: pointer;
+    animation: pulse 1.5s ease-in-out infinite;
     @include respond(xl) {
+      font-size: 30px;
       margin-top: 10px;
     }
     @include respond(sm) {
@@ -48,6 +50,9 @@
 
       position: absolute;
       bottom: 20px;
+
+      // animation: pulse 1.5s ease-in-out infinite;
+
       @include respond(lg) {
         bottom: 70px;
       }
@@ -227,5 +232,20 @@
     @include respond(md) {
       display: none;
     }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.01);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
