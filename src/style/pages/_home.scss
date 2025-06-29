@@ -27,15 +27,16 @@
     .content {
       @include flex-center;
       flex-direction: column;
-      font-size: 7vw;
+      font-size: 6vw;
       text-align: center;
       line-height: 1.5; // Better control
       font-weight: 400;
+      text-transform: capitalize;
       @include respond(xl) {
         font-size: 6vw;
       }
       @include respond(sm) {
-        font-size: 10vw;
+        font-size: 9vw;
       }
     }
 
@@ -72,12 +73,14 @@
     border: 4px solid $border-color;
     border-radius: 100px; // Ensures border stays inside the line
     position: relative;
+    text-wrap: nowrap;
     z-index: 1;
     @include respond(xl) {
       font-size: 5.5vw;
     }
     @include respond(sm) {
-      font-size: 9.5vw;
+      padding: 0px 30px; // Less vertical padding to keep it aligned
+      font-size: 6.5vw;
     }
   }
 }

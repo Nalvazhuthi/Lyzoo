@@ -6,23 +6,22 @@ const Home = () => {
     <div className='home-page' id='home'>
       <main className="hero-statement">
         <div className="content">
-          I Solve
-          Humans <br />
-          <div className="highlight">Problems</div>
-          Using Telekinesis
+          I build <br />
+          custom websites &
+          digital solutions
+
+          <div className="highlight">Tailored to your needs</div>
 
           <button className='talk-button'>
-            Let’s talk business
+            Let’s discuss your project
           </button>
-
         </div>
-
 
         <div className="scrolling">
           <div className="icon">
             <ScrollIcon />
           </div>
-          <div className="scroll">Psssh! Scroll a little</div>
+          <div className="scroll">Scroll down to see my work</div>
         </div>
       </main>
     </div>
@@ -30,5 +29,3 @@ const Home = () => {
 }
 
 export default Home
-
-

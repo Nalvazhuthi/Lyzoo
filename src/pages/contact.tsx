@@ -115,7 +115,7 @@ const Contact = () => {
         <a href="mailto:nalvazhuthi2002@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
           <Email />
         </a>
-        <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <a href="https://www.instagram.com/lyzoo_dev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <Instagram />
         </a>
       </div>
