@@ -5,11 +5,10 @@
   display: flex;
   align-items: center;
   padding: 80px 2rem;
-  padding-top: 6rem;
-
+  padding-bottom: 0;
   @include respond(sm) {
     padding: 0.5rem;
-    padding-top: 4.5rem;
+    padding-top: 6rem;
     padding-bottom: 0;
     flex-direction: column;
   }

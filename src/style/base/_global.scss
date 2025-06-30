@@ -34,12 +34,12 @@
 .works-section,
 .contact-page,
 .services-page,
-.loading-screen  {
+.loading-screen {
   overflow: hidden;
   color: white;
   position: relative;
   z-index: 2;
-  
+  padding-top: 6rem;
 }
 
 .home-page {
