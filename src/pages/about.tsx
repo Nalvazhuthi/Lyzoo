@@ -11,7 +11,7 @@ const About = () => {
       </div>
 
       <div className="image-scroller">
-        <img src={webImage} alt="" />
+        <img src={webImage} draggable={false} alt="" />
       </div>
     </div>
   )

@@ -22,8 +22,27 @@ input[type="password"]::-webwkit-inner-spin-button {
   /* Just in case */
   display: none;
 }
+
+
 textarea {
   background: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+  caret-color: black;
+}
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+  caret-color: black;
 }
 
 /* Scrollbar styles for dark theme */
