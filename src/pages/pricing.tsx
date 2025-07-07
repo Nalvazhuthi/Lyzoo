@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import usePlanStore from '../store/usePlanStore';
 
 const Pricing = () => {
-    const { selectedPlan, setSelectedPlan } = usePlanStore();
+    const { setSelectedPlan } = usePlanStore();
 
     const plans = [
         {
@@ -83,7 +83,7 @@ const Pricing = () => {
                         key={index}
                         className={`plan-wrapper ${plan.recommended ? 'recommended' : ''}`}
                     >
-                      
+
 
                         <div className="plan-header">
                             <h3>{plan.name}</h3>
