@@ -1,0 +1,183 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+.pricing-container {
+    width: 100%;
+    // min-height: 100vh;
+    color: $text-primary;
+    position: relative;
+    z-index: 2;
+
+    padding: 4rem 2rem;
+    padding-top: 6rem;
+    padding-bottom: 0;
+
+
+    @include flex-center;
+
+    flex-direction: column;
+
+    .services-header {
+        text-align: center;
+        // margin-bottom: 3rem;
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: $text-primary;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: $text-secondary;
+        }
+    }
+
+    .pricing-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 1500px;
+        // margin: 0 auto;
+        width: 100%;
+        padding-top: 50px;
+
+        .plan-wrapper {
+            border: 1px solid $border-color;
+            border-radius: 6px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.5);
+
+            &:nth-child(2) {
+                transform: scale(1.05);
+                border: 1px solid #f39c12;
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    content: "RECOMMENDED";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: #f39c12;
+                    color: $bg-color;
+                    padding: 0.5rem 1rem;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    border-bottom-left-radius: 6px;
+                }
+            }
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+
+                &:nth-child(2) {
+                    transform: translateY(-10px) scale(1.05);
+                }
+            }
+
+            .plan-header {
+                margin-bottom: 2rem;
+                text-align: center;
+
+                h2 {
+                    font-size: 1.8rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                .plan-price {
+                    padding-top: 6px;
+                    font-size: 2rem;
+                    color: #f39c12;
+                    font-weight: bold;
+                }
+            }
+
+            .plan-features {
+                flex-grow: 1;
+                margin-bottom: 2rem;
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+
+                    li {
+                        padding: 0.5rem 0;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+
+                        .feature-icon {
+                            color: green;
+                        }
+                    }
+                }
+
+                .excluded-features {
+                    .feature-icon {
+                        color: red;
+
+                    }
+
+                    span {
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+
+            .plan-cta {
+                background: #f39c12;
+                color: $bg-color;
+                border: none;
+                padding: 1rem;
+                border-radius: 4px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #e67e22;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 992px) {
+    .pricing-container {
+        height: auto;
+        padding: 4rem 1rem;
+        padding-bottom: 0;
+
+        .pricing-wrapper {
+            grid-template-columns: 1fr;
+            max-width: 500px;
+
+            .plan-wrapper {
+                &:nth-child(2) {
+                    transform: none;
+
+                    &::before {
+                        font-size: 0.7rem;
+                    }
+                }
+
+                &:hover {
+                    transform: translateY(-2px);
+
+                    &:nth-child(2) {
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+        }
+    }
+}

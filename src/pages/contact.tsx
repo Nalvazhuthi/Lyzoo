@@ -1,11 +1,14 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Email, GitHub, Instagram, LinkedIn } from '../assets/svg/exportIcons';
+import usePlanStore from '../store/usePlanStore';
+import DropDown from '../components/dropDown';
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
+  const { selectedPlan, setSelectedPlan } = usePlanStore();
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
@@ -95,6 +98,15 @@ const Contact = () => {
             required
             className="form-textarea"
           />
+
+
+          <DropDown
+            values={["Standard", "Premium", "Elite"]}
+            placeholder="Select a Plan"
+            value={selectedPlan}
+            onChange={(e) => setSelectedPlan(e.target.value)}
+          />
+
           <button
             type="submit"
             className="form-button"
@@ -106,7 +118,7 @@ const Contact = () => {
       </div>
 
       <div className="social-links">
-        <a href="https://linkedin.com/in/nalvazhuthi-n-n-a78992347/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/nalvazhuthi-n-a78992347/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <LinkedIn />
         </a>
         <a href="https://github.com/Nalvazhuthi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
