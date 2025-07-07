@@ -29,7 +29,9 @@ const DropDown: React.FC<DropDownProps> = ({ values, placeholder, value, onChang
   return (
     <div className="dropdown" ref={dropdownRef}>
       <div className="dropdown-header" onClick={() => setIsOpen(!isOpen)}>
-        {value || placeholder || "Select an option"}
+        {(!value && (placeholder || "Select an option"))}
+        {value && <div className="value">{value}</div>}
+
         <span className="arrow">{isOpen ? "▲" : "▼"}</span>
       </div>
       {isOpen && (

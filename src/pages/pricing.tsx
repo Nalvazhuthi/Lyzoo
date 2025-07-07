@@ -73,7 +73,7 @@ const Pricing = () => {
     return (
         <section className="pricing-container" id='pricing'>
             <div className="services-header">
-                <h2>Simple, Transparent Pricing</h2>
+                <h2>Transparent Pricing</h2>
                 <p>Choose the perfect plan for your business</p>
             </div>
 
@@ -83,9 +83,7 @@ const Pricing = () => {
                         key={index}
                         className={`plan-wrapper ${plan.recommended ? 'recommended' : ''}`}
                     >
-                        {plan.recommended && (
-                            <div className="recommended-badge">Most Popular</div>
-                        )}
+                      
 
                         <div className="plan-header">
                             <h3>{plan.name}</h3>

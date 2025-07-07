@@ -4,6 +4,9 @@ const NavBar = () => {
   const [hamburderOpen, setHamburderOpen] = useState(false);
   const hamburgerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
+  const [activeNav, setActiveNav] = useState<string>("#home");
+
+
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -44,22 +47,34 @@ const NavBar = () => {
       </div>
 
       <nav className={`hamburder-navs ${hamburderOpen ? 'open' : ''}`} ref={menuRef}>
-        <a className="nav" href="#home" onClick={() => setHamburderOpen(false)}>Home</a>
-        <a className="nav" href="#about" onClick={() => setHamburderOpen(false)}>About</a>
-        <a className="nav" href="#works" onClick={() => setHamburderOpen(false)}>Works</a>
-        <a className="nav" href="#services" onClick={() => setHamburderOpen(false)}>Services</a>
-        <a className="nav" href="#contact" onClick={() => setHamburderOpen(false)}>Contact</a>
+        {["#home", "#about", "#services", "#pricing", "#works", "#contact"].map((href) => (
+          <a
+            key={href}
+            className={`nav ${activeNav === href ? 'active' : ''}`}
+            href={href}
+            onClick={() => {
+              setHamburderOpen(false);
+              setActiveNav(href);
+            }}
+          >
+            {href.replace("#", "").charAt(0).toUpperCase() + href.slice(2)} {/* Capitalize */}
+          </a>
+        ))}
       </nav>
 
       <nav className="navs">
-        <a className="nav" href="#home">Home</a>
-        <a className="nav" href="#about">About</a>
-        <a className="nav" href="#services">Services</a>
-        <a className="nav" href="#pricing">Pricing</a>
-        <a className="nav" href="#works">Works</a>
-        <a className="nav" href="#reviews">Reviews</a>
-        <a className="nav" href="#contact">Contact</a>
+        {["#home", "#about", "#services", "#pricing", "#works", "#contact"].map((href) => (
+          <a
+            key={href}
+            className={`nav ${activeNav === href ? 'active' : ''}`}
+            href={href}
+            onClick={() => setActiveNav(href)}
+          >
+            {href.replace("#", "").charAt(0).toUpperCase() + href.slice(2)}
+          </a>
+        ))}
       </nav>
+
 
       <div className="role-location">
         <div className="role">UI/UX Developer</div>

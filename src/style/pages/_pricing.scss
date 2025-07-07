@@ -3,23 +3,34 @@
 
 .pricing-container {
     width: 100%;
-    min-height: 100vh;
-    padding: 6rem 2rem 2rem;
-    background-color: $bg-color;
+    // min-height: 100vh;
     color: $text-primary;
+    position: relative;
+    z-index: 2;
+
+    padding: 4rem 2rem;
+    padding-top: 6rem;
+    padding-bottom: 0;
+
+
+    @include flex-center;
+
+    flex-direction: column;
 
     .services-header {
         text-align: center;
-        margin-bottom: 3rem;
+        // margin-bottom: 3rem;
 
         h2 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: $text-primary;
         }
 
         p {
+            font-size: 1.2rem;
             color: $text-secondary;
-            font-size: 1.1rem;
         }
     }
 
@@ -27,8 +38,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
+        max-width: 1500px;
+        // margin: 0 auto;
+        width: 100%;
+        padding-top: 50px;
 
         .plan-wrapper {
             border: 1px solid $border-color;
@@ -37,7 +50,7 @@
             display: flex;
             flex-direction: column;
             transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(0, 0, 0, 0.5);
 
             &:nth-child(2) {
                 transform: scale(1.05);
@@ -78,6 +91,7 @@
                 }
 
                 .plan-price {
+                    padding-top: 6px;
                     font-size: 2rem;
                     color: #f39c12;
                     font-weight: bold;
@@ -141,6 +155,7 @@
     .pricing-container {
         height: auto;
         padding: 4rem 1rem;
+        padding-bottom: 0;
 
         .pricing-wrapper {
             grid-template-columns: 1fr;

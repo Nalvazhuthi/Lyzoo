@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./style/main.scss"
 import Home from './pages/home'
 import Skills from './pages/skills'
@@ -13,7 +13,11 @@ import Pricing from './pages/pricing'
 
 const App = () => {
   const [modelLoaded, setModelLoaded] = useState(false)
-
+  useEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+  }, []);
   const onModelLoad = () => {
     setTimeout(() => {
       setModelLoaded(true)
