@@ -3,7 +3,7 @@
 
 .services-page {
   padding: 4rem 2rem;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 6rem;
 
   @include flex-center;
@@ -32,7 +32,7 @@
   }
 
   .services-list {
-    margin: 0 120px;
+    // margin: 0 120px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -42,7 +42,6 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
   }
-
 
   .service-card {
     border: 1px solid $text-primary;

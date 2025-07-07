@@ -19,17 +19,18 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_5me3tyz',
-        'template_ra9dcnf',
+        'service_5me3tyz', // Your EmailJS service ID
+        'template_ra9dcnf', // Your EmailJS template ID
         form.current,
         {
-          publicKey: 'M0reUuZOmaFK8Ti3L',
+          publicKey: 'M0reUuZOmaFK8Ti3L', // Your EmailJS public key
         }
       )
       .then(
         () => {
           setSubmitStatus('success');
           form.current?.reset();
+          setSelectedPlan(''); // reset dropdown
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -42,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page" id='contact'>
+    <div className="contact-page" id="contact">
       <div className="contact-header">
         Let's Connect
       </div>
@@ -53,6 +54,7 @@ const Contact = () => {
           You can contact me anytime!
         </div>
 
+        {/* Success Message */}
         {submitStatus === 'success' && (
           <div className="success-message message-wrapper">
             <div className="message-container">
@@ -64,7 +66,7 @@ const Contact = () => {
           </div>
         )}
 
-
+        {/* Error Message */}
         {submitStatus === 'error' && (
           <div className="error-message message-wrapper">
             <div className="message-container">
@@ -76,6 +78,7 @@ const Contact = () => {
           </div>
         )}
 
+        {/* Contact Form */}
         <form ref={form} className="contact-form" onSubmit={sendEmail}>
           <input
             type="text"
@@ -99,13 +102,16 @@ const Contact = () => {
             className="form-textarea"
           />
 
-
+          {/* Dropdown to select a plan */}
           <DropDown
             values={["Standard", "Premium", "Elite"]}
             placeholder="Select a Plan"
             value={selectedPlan}
             onChange={(e) => setSelectedPlan(e.target.value)}
           />
+
+          {/* Hidden input to send the selected plan */}
+          <input type="hidden" name="plan" value={selectedPlan} />
 
           <button
             type="submit"
@@ -117,26 +123,43 @@ const Contact = () => {
         </form>
       </div>
 
+      {/* Social Links */}
       <div className="social-links">
-        <a href="https://www.linkedin.com/in/nalvazhuthi-n-a78992347/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <a
+          href="https://www.linkedin.com/in/nalvazhuthi-n-a78992347/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
           <LinkedIn />
         </a>
-        <a href="https://github.com/Nalvazhuthi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <a
+          href="https://github.com/Nalvazhuthi"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
           <GitHub />
         </a>
-        <a href="mailto:nalvazhuthi2002@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+        <a
+          href="mailto:nalvazhuthi2002@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Email"
+        >
           <Email />
         </a>
-        <a href="https://www.instagram.com/lyzoo_dev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <a
+          href="https://www.instagram.com/lyzoo_dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
           <Instagram />
         </a>
       </div>
-
-
     </div>
   );
 };
 
 export default Contact;
-
-
