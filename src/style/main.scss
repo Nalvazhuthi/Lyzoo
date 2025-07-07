@@ -9,10 +9,12 @@
 
 @use "./components/button";
 @use "./components/loading";
+@use "./components/dropDown";
 
 @use "./pages/home";
 @use "./pages/skills";
 @use "./pages/works";
 @use "./pages/about";
 @use "./pages/services";
+@use "./pages/pricing";
 @use "./pages/contact";

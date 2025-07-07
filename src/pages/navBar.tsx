@@ -54,8 +54,10 @@ const NavBar = () => {
       <nav className="navs">
         <a className="nav" href="#home">Home</a>
         <a className="nav" href="#about">About</a>
-        <a className="nav" href="#works">Works</a>
         <a className="nav" href="#services">Services</a>
+        <a className="nav" href="#pricing">Pricing</a>
+        <a className="nav" href="#works">Works</a>
+        <a className="nav" href="#reviews">Reviews</a>
         <a className="nav" href="#contact">Contact</a>
       </nav>
 

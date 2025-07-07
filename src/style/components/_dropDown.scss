@@ -1,0 +1,47 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+
+.dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-header {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.dropdown-list {
+    position: absolute;
+    top: 105%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+
+    border-radius: 8px;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    background-color: $bg-color;
+}
+
+.dropdown-item:hover,
+.dropdown-item.selected {
+    background-color: #1b1b1b;
+}
+
+.arrow {
+    margin-left: 10px;
+}

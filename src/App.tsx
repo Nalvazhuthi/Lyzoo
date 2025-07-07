@@ -9,6 +9,7 @@ import Scene from './components/scene'
 import NavBar from './pages/navBar'
 import Services from './pages/services'
 import Loading from './components/loading'
+import Pricing from './pages/pricing'
 
 const App = () => {
   const [modelLoaded, setModelLoaded] = useState(false)
@@ -30,11 +31,13 @@ const App = () => {
           <Home />
           <About />
           <Skills />
-          <Works />
           <Services />
+          <Pricing />
+          <Works />
           <Contact />
         </>
       )}
+
     </div>
   )
 }

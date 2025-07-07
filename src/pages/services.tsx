@@ -3,30 +3,37 @@ import React from 'react';
 const Services = () => {
     const techSpecs = [
         {
-            title: "Responsive Web Design",
-            description: "I design websites that look and function great across all devices, ensuring a seamless user experience.",
+            title: "Custom Website Development",
+            description:
+                "I build tailor-made websites that align with your brand, business goals, and functionality requirements.",
         },
         {
-            title: "Modern Front-End Development",
-            description: "I build high-performance interfaces using React, Next.js, and JavaScript (ES6+).",
+            title: "Responsive Web Design",
+            description:
+                "I design and develop mobile-friendly websites that work seamlessly across devices and screen sizes.",
         },
         {
             title: "UI/UX Design",
-            description: "I design clean, user-centered layouts using Figma, focusing on clarity, accessibility, and conversion.",
+            description:
+                "I create intuitive, user-centered designs using Figma — ensuring a great user experience and clear layout.",
         },
         {
-            title: "3D Web Experiences",
-            description: "I create immersive 3D interfaces using Three.js and React Three Fiber to make your brand stand out.",
+            title: "Modern Front-End Development",
+            description:
+                "I use modern frameworks like React, Next.js, and JavaScript (ES6+) to build high-performance, interactive websites.",
         },
         {
-            title: "Component-Based Design",
-            description: "I write scalable code using reusable components and design systems for maintainability and speed.",
+            title: "Performance Optimization & SEO",
+            description:
+                "I optimize websites for speed and search engines — improving load times, accessibility, and organic visibility.",
         },
         {
-            title: "SCSS & Tailwind CSS",
-            description: "I use SCSS for structured styles and Tailwind CSS for rapid prototyping and consistent UI.",
+            title: "CMS & eCommerce Integration",
+            description:
+                "I integrate platforms like WordPress, Sanity, or Shopify, allowing you to manage content or sell products easily.",
         },
     ];
+
 
     return (
         <section className="services-page" id='services'>

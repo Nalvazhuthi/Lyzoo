@@ -36,6 +36,7 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: #fff;
   caret-color: black;
 }
+
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus,
@@ -73,6 +74,26 @@ textarea:-webkit-autofill:active {
 /* Corner (where horizontal and vertical scrollbars meet) */
 ::-webkit-scrollbar-corner {
   background: $bg-color;
+}
+
+
+select {
+  // all: unset;
+  // appearance: none;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  background: none;
+  border: none;
+  font: inherit;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+
+option {
+  background-color: transparent;
+  color: black; /* optional */
 }
 
 html,
