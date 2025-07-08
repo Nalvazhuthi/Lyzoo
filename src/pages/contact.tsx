@@ -10,6 +10,20 @@ const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
   const { selectedPlan, setSelectedPlan } = usePlanStore();
 
+  // Track input values
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  // Form validation
+  const isFormValid =
+    formData.name.trim() !== '' &&
+    formData.email.trim() !== '' &&
+    formData.message.trim() !== '' &&
+    selectedPlan.trim() !== '';
+
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -30,7 +44,8 @@ const Contact = () => {
         () => {
           setSubmitStatus('success');
           form.current?.reset();
-          setSelectedPlan(''); // reset dropdown
+          setFormData({ name: '', email: '', message: '' });
+          setSelectedPlan('');
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -86,20 +101,28 @@ const Contact = () => {
             placeholder="Your Name"
             required
             className="form-input"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
+
           <input
             type="email"
             name="email"
             placeholder="Your Email"
             required
             className="form-input"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           />
+
           <textarea
             name="message"
             placeholder="Your Message"
             rows={5}
             required
             className="form-textarea"
+            value={formData.message}
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           />
 
           {/* Dropdown to select a plan */}
@@ -115,11 +138,12 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="form-button"
-            disabled={isSubmitting}
+            className={`form-button ${!isFormValid || isSubmitting ? 'disabled' : ''}`}
+            disabled={!isFormValid || isSubmitting}
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
+
         </form>
       </div>
 

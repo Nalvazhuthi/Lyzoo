@@ -114,7 +114,6 @@
     outline: none;
     transition: border 0.3s ease;
     color: $text-primary;
-    background: transparent;
 
     option {
       color: $text-primary;
@@ -138,13 +137,21 @@
     color: $text-secondary;
     cursor: pointer;
     font-weight: 600;
-    transition: border 0.3s ease;
+    transition: border 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 
     &:hover {
       color: $text-primary;
       border: 1px solid $text-secondary;
     }
+
+    &.disabled,
+    &:disabled {
+      border-color: #cccccc;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
   }
+
 }
 
 

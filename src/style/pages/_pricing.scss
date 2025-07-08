@@ -61,11 +61,10 @@
                     position: absolute;
                     top: 0;
                     right: 0;
-                    background: #f39c12;
-                    color: $bg-color;
+                    color: $text-primary;
+                    outline: 2px solid $border-color;
                     padding: 0.5rem 1rem;
                     font-size: 0.8rem;
-                    font-weight: bold;
                     border-bottom-left-radius: 6px;
                 }
             }
@@ -91,7 +90,7 @@
                 .plan-price {
                     padding-top: 6px;
                     font-size: 2rem;
-                    color: #f39c12;
+                    color: $text-primary;
                     font-weight: bold;
                 }
             }

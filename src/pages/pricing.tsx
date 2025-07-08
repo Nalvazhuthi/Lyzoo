@@ -27,7 +27,7 @@ const Pricing = () => {
             name: 'Premium',
             price: '₹12,999',
             includes: [
-                '3-5 Page Website',
+                '3 - 5 Page Website',
                 'Unlimited Product Listing',
                 'Instagram Feed / Gallery',
                 'Custom Design',
@@ -45,7 +45,7 @@ const Pricing = () => {
             name: 'Elite',
             price: '₹19,999',
             includes: [
-                '5-8 Page Website',
+                '5 - 8 Page Website',
                 'Unlimited Product Listing',
                 'Instagram Feed / Gallery',
                 'Custom Design',
