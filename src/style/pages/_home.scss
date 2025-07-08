@@ -197,7 +197,7 @@
     background-color: $bg-color;
     transition: all 0.25s linear;
     display: none;
-
+    padding: 0.25rem 0;
     @include respond(md) {
       display: flex;
     }

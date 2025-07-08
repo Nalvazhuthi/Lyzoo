@@ -5,13 +5,14 @@
   height: 100vh;
   @include flex-space-between;
   flex-direction: column;
-  padding-top: 8rem;
+  padding: 8rem 0;
+  padding-bottom: 1rem;
 
   @include respond(sm) {
-    height: 100vh;
-    padding-top: 4.5rem;
-    justify-content: space-around;
+    padding: 5rem 0;
+    padding-bottom: 1rem;
   }
+
 }
 
 .contact-header {
@@ -34,8 +35,14 @@
   gap: 50px;
   padding: 2rem;
 
+  @include respond(md) {
+    gap: 0;
+  }
+
   @include respond(sm) {
-    padding: 0 2rem;
+    padding: 4rem 2rem;
+    flex: 1;
+    justify-content: space-around;
     flex-direction: column;
   }
 
@@ -72,7 +79,7 @@
 }
 
 .contact-message {
-  flex: 1;
+  flex: 1; // Apply for desktop by default
   line-height: 1.6;
   text-align: center;
   font-size: 2vw;
@@ -82,16 +89,21 @@
   }
 
   @include respond(sm) {
+    flex: unset; // Reset or override on small screens
     font-size: 4.5vw;
   }
 }
 
 .contact-form {
   display: flex;
-  flex: 1;
+  flex: 1; // Apply for desktop by default
   flex-direction: column;
   gap: 1.2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.5rem;
+
+  @include respond(sm) {
+    flex: unset; // Reset on small screens
+  }
 
   .form-input,
   .form-textarea {
@@ -103,19 +115,16 @@
     transition: border 0.3s ease;
     color: $text-primary;
     background: transparent;
-    
+
     option {
       color: $text-primary;
       background: transparent;
-
     }
 
     &:focus {
       border-color: $text-primary;
     }
   }
-
-
 
   .form-textarea {
     resize: none;
@@ -138,6 +147,7 @@
   }
 }
 
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -145,7 +155,12 @@
   font-size: 1rem;
   font-weight: 500;
   padding: 1.5rem 2rem;
+  padding: 1.5rem 2rem;
   background-color: rgba(0, 0, 0, 0.8392156863);
+
+  @include respond(sm) {
+    padding: 0.25rem 2rem;
+  }
 
   a {
     color: $text-secondary;

@@ -3,14 +3,12 @@
 
 .pricing-container {
     width: 100%;
-    // min-height: 100vh;
+    min-height: 100vh;
     color: $text-primary;
     position: relative;
     z-index: 2;
 
-    padding: 4rem 2rem;
-    padding-top: 6rem;
-    padding-bottom: 0;
+    padding: 6rem 2rem;
 
 
     @include flex-center;
@@ -44,7 +42,7 @@
         padding-top: 50px;
 
         .plan-wrapper {
-            border: 1px solid $border-color;
+            outline: 2px solid $border-color-secondary;
             border-radius: 6px;
             padding: 2rem;
             display: flex;
@@ -54,7 +52,7 @@
 
             &:nth-child(2) {
                 transform: scale(1.05);
-                border: 1px solid #f39c12;
+                outline: 2px solid $border-color;
                 position: relative;
                 overflow: hidden;
 
@@ -82,7 +80,7 @@
             }
 
             .plan-header {
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
                 text-align: center;
 
                 h2 {
@@ -113,6 +111,7 @@
                         gap: 6px;
 
                         .feature-icon {
+                            font-weight: 700;
                             color: green;
                         }
                     }
@@ -120,6 +119,7 @@
 
                 .excluded-features {
                     .feature-icon {
+                        font-weight: 500;
                         color: red;
 
                     }
@@ -132,8 +132,8 @@
 
 
             .plan-cta {
-                background: #f39c12;
-                color: $bg-color;
+                // background: #f39c12;
+                color: $text-primary;
                 border: none;
                 padding: 1rem;
                 border-radius: 4px;
@@ -141,8 +141,10 @@
                 cursor: pointer;
                 transition: all 0.3s ease;
 
+                outline: 2px solid $border-color;
+
                 &:hover {
-                    background: #e67e22;
+                    background: #232323;
                     transform: translateY(-2px);
                 }
             }

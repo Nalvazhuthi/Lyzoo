@@ -11,11 +11,11 @@ const Pricing = () => {
             includes: [
                 '1 Page Website',
                 'Unlimited Product Listing',
-                'WhatsApp / UPI Checkout',
-                'Instagram Feed / Gallery'
+                'Instagram Feed / Gallery',
+                'Custom Design',
             ],
             excludes: [
-                'Custom Design',
+                'WhatsApp / UPI Checkout',
                 'SEO Optimization',
                 'Online Payments',
                 'Payment Gateway',
@@ -29,9 +29,9 @@ const Pricing = () => {
             includes: [
                 '3-5 Page Website',
                 'Unlimited Product Listing',
-                'WhatsApp / UPI Checkout',
                 'Instagram Feed / Gallery',
                 'Custom Design',
+                'WhatsApp / UPI Checkout',
                 'SEO Optimization'
             ],
             excludes: [
@@ -47,9 +47,9 @@ const Pricing = () => {
             includes: [
                 '5-8 Page Website',
                 'Unlimited Product Listing',
-                'WhatsApp / UPI Checkout',
                 'Instagram Feed / Gallery',
                 'Custom Design',
+                'WhatsApp / UPI Checkout',
                 'SEO Optimization',
                 'Online Payments',
                 'Payment Gateway',

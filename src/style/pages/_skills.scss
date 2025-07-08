@@ -25,20 +25,24 @@
     &.scroll-left .skills-track {
       .skill-item {
         cursor: pointer;
-       
+
         &:nth-child(odd) {
           border: 2px solid $border-color;
         }
       }
+
       animation: scroll-left 210s linear infinite;
     }
 
     &.scroll-right .skills-track {
       .skill-item {
+        cursor: pointer;
+
         &:nth-child(even) {
           border: 2px solid $border-color;
         }
       }
+
       animation: scroll-right 210s linear infinite;
     }
 
@@ -60,6 +64,7 @@
     0% {
       transform: translateX(0%);
     }
+
     100% {
       transform: translateX(-50%);
     }
@@ -69,6 +74,7 @@
     0% {
       transform: translateX(-50%);
     }
+
     100% {
       transform: translateX(0%);
     }
