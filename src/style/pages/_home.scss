@@ -114,23 +114,26 @@
   }
 
   .identity {
-    .last-name {
-      color: $text-secondary;
-      margin-top: 10px;
-      padding-left: 50px;
-
-      @include respond(sm) {
-        padding-left: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      .name{
+        font-size: 16px;
       }
-    }
-
-    @include respond(md) {
-      display: none;
+      .description {
+        color: $text-secondary;
+        font-size: 12px;
+      }
     }
   }
 
   .mobile-logo {
-    .last-name {}
+    .last-name {
+    }
 
     .role {
       color: #a2a2a2;
@@ -145,7 +148,7 @@
     }
   }
 
-  .hamburder {
+  .hamburger {
     width: 40px;
     height: 30px;
     display: none;
@@ -234,13 +237,14 @@
     }
   }
 
-
   .role-location {
     background: transparent;
 
     div {
       background: transparent;
     }
+
+
 
     .role {
       text-wrap: nowrap;

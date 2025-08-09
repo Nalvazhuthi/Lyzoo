@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { LogoIcon } from '../assets/svg/exportIcons';
 
 const NavBar = () => {
   const [hamburderOpen, setHamburderOpen] = useState(false);
@@ -28,17 +29,16 @@ const NavBar = () => {
   return (
     <header className="intro-header">
       <div className="identity">
-        <div className="first-name">Nanni</div>
-        <div className="last-name">Nalvazhuthi</div>
+        <LogoIcon />
+        <div className="details">
+          <div className="name">sleekweb.studio</div>
+          <div className="description">Freelance Web Developer | Ecom Sites</div>
+        </div>
       </div>
 
-      <div className="mobile-logo">
-        <div className="last-name">Nalvazhuthi</div>
-        <div className="role">UI/UX Developer</div>
-      </div>
 
       <div
-        className={`hamburder ${hamburderOpen ? 'open' : ''}`}
+        className={`hamburger ${hamburderOpen ? 'open' : ''}`}
         onClick={() => setHamburderOpen(!hamburderOpen)}
         ref={hamburgerRef} // 👉 separate ref
       >
@@ -77,7 +77,7 @@ const NavBar = () => {
 
 
       <div className="role-location">
-        <div className="role">UI/UX Developer</div>
+        <div className="role">Web Developer</div>
         <div className="location">Based in India</div>
       </div>
     </header>

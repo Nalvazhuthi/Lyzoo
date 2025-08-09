@@ -6,7 +6,7 @@
   align-items: center;
   padding: 80px 2rem;
   padding-bottom: 0;
-  @include respond(sm) {
+  @include respond(md) {
     padding: 1rem;
     padding-top: 4.5rem;
     padding-bottom: 0;
